@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.PptoEstadoActual" table="TX_PPTO_EST_ACTUAL">
+        <id name="id" column="estact_nroppto">
+        	<generator class="foreign">
+        		<param name="property">presupuesto</param>
+        	</generator>
+        </id>
+        <property name="nuevo" column="estact_nuevo" ></property><property name="actualizado" column="estact_actualizado">
+</property><property name="confirmado" column="estact_confirmado" /><property
+    		name="cancelado" column="estact_cancelado">
+</property>
+    	<property name="rechazado" column="estact_rechazado"></property>
+    	<property name="os" column="estact_os"></property>
+    	<property name="of" column="estact_of"></property>
+    	<property name="facturado" column="estact_facturado"></property>
+    	<property name="cobrado" column="estact_cobrado"></property>
+    	<property name="adelanto" column="estact_adelanto"></property>
+    	<property name="adelantado" column="estact_adelantado"></property>
+    	<property name="acobrar" column="estact_cobrado_confirmar"></property>
+    	<property name="adelantoacobrar" column="estact_anticipo_confirmar"></property>
+    	<property name="adelantocobrado" column="estact_anticipo_cobrado"></property>
+    	<property name="adicionales" column="estact_adicionales"></property>
+    	<property name="adicionalesFacturados" column="estact_adicionales_facturados"></property>
+    	<one-to-one name="presupuesto"
+    		class="crm.libraries.abm.entities.Presupuesto" constrained="true"
+    		lazy="false">
+    	</one-to-one>
+    	<property name="oc" column="estact_oc"></property>
+
+    </class>
+
+</hibernate-mapping>

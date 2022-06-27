@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.AgendaPpto" table="TX_AGENDA_PPTO">       
+        
+        <id name="codigo" column="cob_nroppto"/>
+        
+        <property name="codCobrador" column="cob_cod_cobrador">
+        </property>
+        
+        <property name="codContacto" column="cob_cod_contacto">
+      	</property>
+      	<property name="direccionPago" column="cob_direccion_pago">
+      	</property>
+      	<property name="horarioPago" column="cob_fecha_hora_pago">
+      	</property>
+      	
+      	<property name="codTipoRecibo" column="cob_tipo_recibo">
+      	</property>
+      	<property name="numeroRecibo" column="cob_nro_recibo">
+      	</property>
+        
+    </class>
+
+</hibernate-mapping>

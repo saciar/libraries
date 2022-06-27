@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.PptoCambioEstado" table="TX_CAMBIO_ESTADO">
+        <id name="id" column="chest_id">
+        	<generator class="identity"></generator>
+        </id>
+        <property name="fecha" column="chest_fecha" />
+        <many-to-one name="estado" column="chest_estado" lazy="false"/>
+    	<many-to-one name="usuario" column="chest_usuario" lazy="false" />
+
+    	<many-to-one name="presupuesto"
+    		class="crm.libraries.abm.entities.Presupuesto" 
+    		column="chest_nroppto" update="false" insert="false" lazy="false"/>
+    </class>
+
+</hibernate-mapping>

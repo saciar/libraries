@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.CondicionPago" table="MST_CONDICIONES_PAGO">
+        <id name="codigo" column="cpa_codcondicion">
+        </id>
+        <property name="descripcion" column="cpa_descripcion" />
+        <property name="descripcionDetallada" column="cpa_descrip_detallada" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.UnidadBonus" table="MST_UNIDADES_BONUS">
+        <!--
+        <id name="codigo" column="ucb_codunidad">
+        </id>
+        <property name="nivel" column="ucb_nivel" />
+        <property name="objetivo" column="ucb_objetivo" />
+        <property name="bonusEquipo" column="ucb_bonus_equipo" />
+        <property name="activo" column="activo" />
+        -->
+        
+        <id name="nivel" column="ucb_nivel" />  
+              
+		<property name="codigo" column="ucb_codunidad" />
+        <property name="objetivo" column="ucb_objetivo" />
+        <property name="bonusEquipo" column="ucb_bonus_equipo" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

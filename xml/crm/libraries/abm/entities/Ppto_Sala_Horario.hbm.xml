@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_Sala_Horario" table="TX_PPTO_SALAS_HORARIOS">
+        
+        <id name="id" column="sh_id">
+        	<generator class="increment"/>
+        </id>
+
+        <many-to-one name="sala" column="sh_codsala"
+        	class="crm.libraries.abm.entities.Ppto_Sala" update="false"
+        	insert="false" lazy="false" />
+
+        <property name="fecha" column="sh_fecha" />
+        <property name="horaDesde" column="sh_hora_desde" />
+        <property name="horaHasta" column="sh_hora_hasta" />
+    </class>
+
+</hibernate-mapping>

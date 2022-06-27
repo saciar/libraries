@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.PrecioUnidad" table="MST_UNIDADES_PRECIOS">
+        <!--<id type="long">
+        	<column name="codigoUnidad">up_codunidad</column>
+        	<column name="codigoLista">up_codlista</column>
+        </id>-->
+        
+        <composite-id>
+        	<key-property name="codigoUnidad"/>
+        	<key-property name="codigoLista"/>
+        </composite-id>
+        
+        <!--<property name="codigoUnidad" column="up_codunidad" />
+        <property name="codigoLista" column="up_codlista" />-->
+    </class>
+
+</hibernate-mapping>

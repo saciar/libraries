@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="crm.libraries.abm.entities.EquiposFamilias" table="inv_equipos_familias">
+        <id name="codigo" type="string">
+            <column name="eqfam_idfamilia" />
+            <generator class="identity" />
+        </id>
+        <property name="eqfamDescripcion" type="string">
+            <column name="eqfam_descripcion" length="50" not-null="true" />
+        </property>
+        <property name="eqfamActivo" type="boolean">
+            <column name="eqfam_activo" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

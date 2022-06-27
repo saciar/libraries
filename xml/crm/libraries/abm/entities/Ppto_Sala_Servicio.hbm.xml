@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_Sala_Servicio" table="TX_PPTO_SALAS_SERVICIOS">
+        
+        <id name="id" column="ppto_ss_id">
+        	<generator class="increment"/>
+        </id>
+		
+		<set name="descripcionDetallada" cascade="all" lazy="false">
+        	<key column="psdd_servicio_id" not-null="true" />
+        	<one-to-many
+        		class="crm.libraries.abm.entities.Ppto_Sala_Servicio_Desc_Detallada" />
+        </set>
+
+        <many-to-one name="sala" column="ppto_ss_pls"
+        	class="crm.libraries.abm.entities.Ppto_Sala" update="false"
+        	insert="false" lazy="false" />
+
+        <property name="orden" column="ppto_ss_orden"/>
+        <property name="cantidad" column="ppto_ss_cantidad"/>
+        
+        <many-to-one name="servicio" column="ppto_ss_servicio"
+        	class="crm.libraries.abm.entities.Servicio" lazy="false" />
+
+        <many-to-one name="modalidad" column="ppto_ss_modalidad"
+        	class="crm.libraries.abm.entities.ModalidadContrat"
+        	lazy="false" />
+		
+        <property name="dias" column="ppto_ss_dias"/>
+        
+        <property name="precioDeLista" column="ppto_ss_preciolista"/>
+        <property name="descuento" column="ppto_ss_descuento"/>
+        <property name="precioDescuento" column="ppto_ss_preciodto"/>
+        <property name="fechaCreacion" column="ppto_ss_fecappend" />
+        <property name="detalle" column="ppto_ss_detalle" />
+        <property name="modificado" column="ppto_ss_modificado" />
+    </class>
+
+</hibernate-mapping>

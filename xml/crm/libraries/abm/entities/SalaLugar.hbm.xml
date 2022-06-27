@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.SalaLugar" table="MST_EVT_LUGAR_SALAS">
+        
+        <id name="codigo" column="els_codlugsala">
+        </id>
+
+        <property name="codigoSala" column="els_codsala" />
+        <property name="codigoLugar" column="els_codlugar" />
+        <property name="descripcion" column="els_descripcion" />
+        <property name="largo" column="els_largo" />
+        <property name="ancho" column="els_ancho" />
+        <property name="altura" column="els_altura" />
+        <property name="activo" column="activo" />
+        <property name="capacidad" column="els_capacidad" />
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Asistente" table="MST_ASISTENTES">
+        <id name="codigo" column="as_codasist">
+        </id>
+        <property name="apellidoYNombre" column="apynom" />
+        <property name="modalidad" column="modalidad_asist" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

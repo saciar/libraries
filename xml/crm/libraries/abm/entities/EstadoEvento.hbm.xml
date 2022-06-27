@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.EstadoEvento" table="MST_ESTADO_EVENTO">
+		<id name="codigo" column="eev_codestado">
+        </id>
+		<property name="activo" column="activo"></property>
+		<property name="descripcion" column="eev_descripcion"></property>
+    </class>
+
+</hibernate-mapping>        

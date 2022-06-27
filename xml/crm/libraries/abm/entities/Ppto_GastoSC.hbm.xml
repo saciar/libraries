@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_GastoSC" table="TX_GASTOS_CONTRATACIONES">
+        
+        <id name="id" column="gc_id">
+        	<generator class="increment"/>
+        </id>
+<!--
+        <many-to-one name="presupuesto" column="gc_ppto_nroppto"
+        	class="crm.libraries.abm.entities.Presupuesto" insert="false"
+        	update="false" lazy="false" 
+        />
+-->
+
+        <many-to-one name="ppto_Sala_Servicio" column="gc_ppto_ss_id"
+        	class="crm.libraries.abm.entities.Ppto_Sala_Servicio" insert="true"
+        	update="true" lazy="false" 
+        />
+
+        <property name="proveedor" column="gc_codproveedor"/>
+        <property name="detalle" column="gc_detalle"/>
+        <property name="costo" column="gc_costo"/>
+        <property name="precio" column="gc_precio"/>
+        <property name="sala" column="gc_nombre_sala"/>
+        <property name="cantidad" column="gc_dias"/>
+        <property name="estado" column="gc_estado_serv"/>
+    </class>
+
+</hibernate-mapping>

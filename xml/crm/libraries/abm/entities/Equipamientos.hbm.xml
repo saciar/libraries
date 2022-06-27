@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="crm.libraries.abm.entities.Equipamientos" table="inv_equipamiento">
+        <id name="codigo" column="eq_idequipo">
+        </id>
+        <property name="deposito" column="eq_deposito_inicial" />
+        <property name="subfamilia" column="eq_subfamilia" />
+        <property name="marca" column="eq_marca" />
+        <property name="nroSerie" column="eq_nroserie" />
+        <property name="activo" column="eq_activo" />
+        <property name="observaciones" column="eq_observaciones" />
+        <property name="estado" column="eq_estado" />
+        <property name="codigoBarras" column="eq_cod_barras" />
+        <property name="modelo" column="eq_modelo" />
+        <property name="alto" column="eq_alto" />
+        <property name="ancho" column="eq_ancho" />
+        <property name="largo" column="eq_largo" />
+        <property name="peso" column="eq_peso" />
+    </class>
+</hibernate-mapping>

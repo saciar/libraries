@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.ClienteFacturacion" table="MST_CLIENTE_FACT">
+        <id name="codigo" column="cf_codcliente">
+        </id>
+		<property name="calle" column="cf_calle" />
+		<property name="numero" column="cf_nro" />
+		<property name="piso" column="cf_piso" />
+		<property name="depto" column="cf_dpto" />
+		<property name="codigoPostal" column="cf_cp" />
+		<property name="localidad" column="cf_loc" />
+		<property name="partido" column="cf_codpartido" />
+		<property name="provincia" column="cf_codprovincia" />
+		<property name="pais" column="cf_codpais" />
+		<property name="diaHoraPago" column="cf_dia_hora_pago" />
+		<property name="domicilioPago" column="cf_domic_pago" />
+		<property name="codProveedor" column="cf_codprovcrn" />	
+    </class>
+
+</hibernate-mapping>

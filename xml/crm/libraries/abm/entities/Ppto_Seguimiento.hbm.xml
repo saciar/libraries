@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_Seguimiento" table="TX_SEGUIMIENTO">
+        <id name="id" column="seg_nroppto">
+        	<generator class="foreign">
+        		<param name="property">presupuesto</param>
+        	</generator>
+        </id>
+        <property name="fechaYHora" column="seg_fechahora" />
+        <property name="codigoUsuario" column="seg_usuario" />
+        <property name="codigoSeguimiento" column="seg_item_seg" />
+        <property name="codigoSeguimientoRespuesta" column="seg_item_res" />
+        <property name="observaciones" column="seg_observaciones" />
+    	<one-to-one name="presupuesto"
+    		class="crm.libraries.abm.entities.Presupuesto" constrained="true"
+    		lazy="false">
+    	</one-to-one>
+
+    </class>
+
+</hibernate-mapping>

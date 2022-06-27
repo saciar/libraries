@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.PrtPptoCondReserva" table="MST_PRT_PPTO_COND_RESERVA">
+        <id name="codigo" column="ppcr_id">
+        </id>
+        <property name="titulo" column="ppcr_desc_abreviada" />
+        <property name="descripcion" column="ppcr_descripcion" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

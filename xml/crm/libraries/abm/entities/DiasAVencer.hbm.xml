@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+   <class name="crm.libraries.abm.entities.DiasAVencer" table="MST_DIAS_A_VENCER" >
+        <id name="codigo" column="dav_id">
+        </id>
+		<property name="dias" column="dav_dias" />
+    </class>
+
+</hibernate-mapping>

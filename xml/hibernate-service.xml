@@ -1,0 +1,53 @@
+<server>
+	
+	<mbean code="org.jboss.hibernate.jmx.Hibernate"
+		name="jboss.har:service=Hibernate">
+		
+		<attribute name="DatasourceName">java:/MySqlDS</attribute>
+		<!--attribute name="Dialect">org.hibernate.dialect.HSQLDialect</attribute-->
+		<attribute name="Dialect">org.hibernate.dialect.MySQLDialect</attribute>
+		
+		<attribute name="SessionFactoryName">java:/hibernate/SessionFactory</attribute>
+		<attribute name="ShowSqlEnabled">true</attribute>
+		<attribute name="SqlCommentsEnabled">false</attribute>
+
+		<attribute name="CacheProviderClass">org.hibernate.cache.HashtableCacheProvider</attribute>
+		
+		<!-- <attribute name="Hbm2ddlAuto">create-drop</attribute> -->
+		
+		<!-- 
+		
+		 [TransactionManagerLookupFactory] instantiated TransactionManagerLookup
+16:58:45,598 INFO  [SettingsFactory] Automatic flush during beforeCompletion(): enabled
+16:58:45,600 INFO  [SettingsFactory] Automatic session close at end of transaction: enabled
+16:58:45,600 INFO  [SettingsFactory] JDBC batch size: 15
+16:58:45,601 INFO  [SettingsFactory] JDBC batch updates for versioned data: disabled
+16:58:45,601 INFO  [SettingsFactory] Scrollable result sets: enabled
+16:58:45,602 INFO  [SettingsFactory] JDBC3 getGeneratedKeys(): enabled
+16:58:45,602 INFO  [SettingsFactory] Connection release mode: after_statement
+16:58:45,603 INFO  [SettingsFactory] Default batch fetch size: 1
+16:58:45,604 INFO  [SettingsFactory] Generate SQL with comments: disabled
+16:58:45,604 INFO  [SettingsFactory] Order SQL updates by primary key: disabled
+16:58:45,605 INFO  [SettingsFactory] Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+16:58:45,605 INFO  [ASTQueryTranslatorFactory] Using ASTQueryTranslatorFactory
+16:58:45,606 INFO  [SettingsFactory] Query language substitutions: {}
+16:58:45,606 INFO  [SettingsFactory] Second-level cache: enabled
+16:58:45,607 INFO  [SettingsFactory] Query cache: disabled
+16:58:45,607 INFO  [SettingsFactory] Cache provider: org.hibernate.cache.HashtableCacheProvider
+16:58:45,608 INFO  [SettingsFactory] Optimize cache for minimal puts: disabled
+16:58:45,609 INFO  [SettingsFactory] Structured second-level cache entries: disabled
+16:58:45,609 INFO  [SettingsFactory] Echoing all SQL to stdout
+16:58:45,610 INFO  [SettingsFactory] Statistics: disabled
+16:58:45,611 INFO  [SettingsFactory] Deleted entity synthetic identifier rollback: disabled
+16:58:45,612 INFO  [SettingsFactory] Default entity-mode: POJO
+16:58:45,624 INFO  [SessionFactoryImpl] building session factory
+16:58:46,999 INFO  [SessionFactoryObjectFactory] Not binding factory to JNDI, no JNDI name configured
+16:58:47,000 INFO  [NamingHelper] JNDI InitialContext properties:{}
+16:58:47,002 INFO  [SessionFactoryImpl] Checking 0 named queries
+16:58:47,003 INFO  [Hibernate] SessionFactory successfully built and bound into JNDI [java:/hibernate/SessionFactory]
+16:58:47,080 INFO  [TomcatDeployer] deploy, ctxPath=/congresscrm, warUrl=.../tmp/deploy/tmp54318congress.ear-contents/congresscrm.war/
+		
+		 -->
+	</mbean>
+	
+</server>

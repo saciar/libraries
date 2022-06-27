@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.MarcaEquipo" table="inv_equipos_marcas">
+        <id name="codigo" column="marc_id">
+        </id>
+        <property name="descripcion" column="marc_descripcion" />
+        <property name="activo" column="marc_activo" />
+    </class>
+
+</hibernate-mapping>

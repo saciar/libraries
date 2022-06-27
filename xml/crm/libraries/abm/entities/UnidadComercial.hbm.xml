@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.UnidadComercial" table="MST_UNIDADES_COMERCIALES">
+        <id name="codigo" column="uc_codunidad">
+        </id>
+        <property name="codigoSucursal" column="uc_codsucursal" />
+        <property name="descripcion" column="uc_descripcion" />
+        <property name="codigoSupervisor" column="uc_codsupervisor" />
+        <property name="objetivoGlobal" column="uc_obj_global" />
+		<property name="activo" column="activo" />
+
+    </class>
+
+</hibernate-mapping>

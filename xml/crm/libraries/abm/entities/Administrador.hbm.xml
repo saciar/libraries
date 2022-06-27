@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Administrador" table="MST_ADMINISTRADORES">
+        <id name="codigo" column="ad_codadmin">
+        </id>
+        <property name="codUsuario" column="ad_codusuario" />
+        <property name="apellidoYNombre" column="apynom" />
+        <property name="categoria" column="ad_categoria" />
+        <property name="fecing" column="fecing" />
+        <property name="nextelFlota" column="nextel_flota" />
+        <property name="idNextel" column="nextel_id" />
+	    <property name="activo" column="activo" />
+	
+    </class>
+
+</hibernate-mapping>

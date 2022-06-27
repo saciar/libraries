@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Packaging Generator" default="_packaging_generation_">
+<target name="_packaging_generation_" depends="N65540,N65567,N65602"/>
+<target name="N65540" description="libCRM.jar">
+<mkdir dir="dist"/>
+<jar destfile="dist/libCRM.jar">
+<zipfileset dir="build" includes="crm/libraries/sql/**"/>
+<zipfileset dir="build" includes="crm/libraries/util/**"/>
+</jar>
+</target>
+<target name="N65567" description="libCRM.har">
+<mkdir dir="dist"/>
+<jar destfile="dist/libCRM.har">
+<zipfileset dir="xml" prefix="META-INF">
+<include name="hibernate-service.xml"/>
+</zipfileset>
+<zipfileset dir="xml" includes="**/*.hbm.xml"/>
+<zipfileset dir="build" includes="**/*.class" excludes="crm/libraries/sql/**,crm/libraries/util/**"/>
+</jar>
+</target>
+<target name="N65602" description="libCRM.ear"/>
+</project>

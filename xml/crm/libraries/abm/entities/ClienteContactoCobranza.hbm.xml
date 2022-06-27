@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.ClienteContactoCobranza" table="MST_CLIENTE_CONT_COBRANZA">
+        <id name="codigo" column="cobct_id">
+        </id>    
+        <property name="codigoCliente" column="cobct_codcliente" />                        
+        <property name="codigoContacto" column="cobct_codcontacto" />
+        <property name="titulo" column="cobct_titulo" />
+        <property name="apellidoYNombre" column="cobct_apynom" />
+        <property name="departamento" column="cobct_departamento" />
+        <property name="cargo" column="cobct_cargo" />
+        <property name="telefono1" column="cobct_telefono1" />
+        <property name="telefono2" column="cobct_telefono2" />
+        <property name="fax" column="cobct_fax" />
+        <property name="interno" column="cobct_interno" />
+        <property name="flotaNextel" column="cobct_nextel_flota" />
+        <property name="idNextel" column="cobct_nextel_id" />        
+        <property name="email" column="cobct_email" />
+        <property name="fechaUltimoContacto" column="cobct_fec_ult_contacto" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

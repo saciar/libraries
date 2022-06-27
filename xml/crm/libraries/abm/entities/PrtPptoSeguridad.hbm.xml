@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.PrtPptoSeguridad" table="MST_PRT_PPTO_SEGURIDAD">
+        <id name="codigo" column="ppse_id">
+        </id>
+        <property name="titulo" column="ppse_desc_abreviada" />
+        <property name="descripcion" column="ppse_descripcion" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

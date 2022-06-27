@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.VistaUCVendedores" table="VW_UC_VENDEDORES">
+        <id name="codigo" column="ID">
+        </id>
+        <property name="codigoVendedor" column="CODVEND" />
+        <property name="nombreVendedor" column="NOMBREVEND" />
+        <property name="codigoUnidadComercial" column="CODUC" ></property>
+        <property name="descripcionUnidadComercial" column="uc_descripcion" />
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.DestinatarioOS" table="MST_COLDS">
+        <id name="codigo" column="cold_cod">
+        </id>
+        <property name="nombre" column="cold_descripcion" />
+        <property name="email" column="cold_email" />
+        <property name="activo" column="cold_activo" />
+    </class>
+
+</hibernate-mapping>

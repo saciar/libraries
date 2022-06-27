@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Cliente" table="MST_CLIENTE">
+        <id name="codigo" column="cl_codcliente">
+        </id>
+     	<property name="codigoBejerman" column="cl_cod_bejerman" />
+     	<property name="nombreFantasia" column="nombre_fantasia" />
+        <property name="empresa" column="empresa" />
+   
+        <property name="calle" column="domleg_calle" />
+        <property name="numero" column="domleg_nro" />
+        <property name="piso" column="domleg_piso" />
+        <property name="departamento" column="domleg_dpto" />
+        <property name="codigoPostal" column="domleg_cp" />
+        <property name="localidad" column="domleg_loc" />
+        <property name="partido" column="domleg_codpartido" />
+        <property name="provincia" column="domleg_codprovincia" />
+        <property name="pais" column="domleg_codpais" />
+        <property name="cuit" column="CUIT" />        
+        <property name="iva" column="cl_iva" />
+        <property name="pagoContacto" column="pago_contacto" />
+        <property name="pagoTelefono" column="pago_telefono" />
+        
+        <property name="fechaModificacion" column="cl_fecmodif" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

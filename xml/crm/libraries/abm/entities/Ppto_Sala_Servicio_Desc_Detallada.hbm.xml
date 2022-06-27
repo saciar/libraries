@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_Sala_Servicio_Desc_Detallada" 
+    	table="TX_PPTO_SERVICIO_DESC_DETALLADA">
+
+	<id name="id" column="psdd_id">
+		<generator class="crm.libraries.abm.entities.IncrementGenerator"/>
+	</id>
+
+        <many-to-one name="servicio" column="psdd_servicio_id" 
+        	class="crm.libraries.abm.entities.Ppto_Sala_Servicio"
+        	update="false" insert="false" lazy="false" />
+
+	<property name="descripcion" column="psdd_descripcion"/>
+
+    </class>
+
+</hibernate-mapping>

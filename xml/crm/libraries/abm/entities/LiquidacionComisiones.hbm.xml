@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.LiquidacionComisiones" table="TX_LIQ_COMISIONES">
+        <id name="codigo" column="tlc_id">
+        </id>
+        <property name="numeroPresupuesto" column="tlc_nroppto" />
+        <property name="fechaDesde" column="tlc_fecdesde" />
+        <property name="fechaHasta" column="tlc_fechasta" />
+        <property name="facturado" column="tlc_fact" />
+        <property name="liquidado" column="tlc_liquida" />
+        <property name="codigoUnidad" column="tlc_codunidad" />
+        <property name="codigoVendedor" column="tlc_codvendedor" />
+        <property name="cobrado" column="tlc_cobrado" />
+        <property name="tipoComision" column="tlc_tipo_comision" />
+    </class>
+
+</hibernate-mapping>

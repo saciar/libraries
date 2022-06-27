@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.TxSeguimiento" table="TX_SEGUIMIENTO">
+        <id name="codigo" column="seg_id">
+        </id>
+        <property name="numeroPresupuesto" column="seg_nroppto" />
+        <property name="fechaYHora" column="seg_fechahora" />
+        <property name="codigoUsuario" column="seg_usuario" />
+        <property name="codigoSeguimiento" column="seg_item_seg" />
+        <property name="codigoSeguimientoRespuesta" column="seg_item_res" />
+        <property name="observaciones" column="seg_observaciones" />
+    </class>
+
+</hibernate-mapping>

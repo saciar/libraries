@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.EventoUniforme" table="MST_EVT_UNIFORME">
+        <id name="codigo" column="eu_codtipo">
+        </id>
+        <property name="descripcion" column="eu_descripcion" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

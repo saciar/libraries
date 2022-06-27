@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.CostoOperativo" table="MST_COSTO_OPERATIVO" >
+        <id name="codigo" column="cop_id">
+        </id>
+        <property name="costo" column="cop_costo" />
+    </class>
+
+</hibernate-mapping>

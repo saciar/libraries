@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.CodigoPostal" table="MST_CODIGOPOSTAL">
+        <id name="codigo" column="cp_id">
+        </id>
+        <property name="codLocalidad" column="cp_codlocalidad" />
+        <property name="codigoPostal" column="cp_codpostal" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

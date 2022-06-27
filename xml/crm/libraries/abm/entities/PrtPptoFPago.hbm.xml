@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.PrtPptoFPago" table="MST_PRT_PPTO_FPAGO">
+        <id name="codigo" column="ppfp_id">
+        </id>
+        <property name="titulo" column="ppfp_desc_abreviada" />        
+        <property name="descripcion" column="ppfp_descripcion" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

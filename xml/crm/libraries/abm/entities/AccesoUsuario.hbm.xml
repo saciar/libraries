@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.AccesoUsuario" table="MST_USR_ACCESOS">
+        <id name="codigoUsuario" column="ua_codusuario">
+        </id>
+        <property name="codigoAcceso" column="ua_codacceso" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

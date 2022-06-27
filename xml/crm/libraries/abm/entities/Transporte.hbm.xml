@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Transporte" table="INV_TRANSPORTES">
+        <id name="codigo" column="id_transporte">
+        </id>
+        <property name="descripcion" column="trans_descripcion" />
+        <property name="matricula" column="trans_matricula" />
+        <property name="activo" column="trans_activo" />
+    </class>
+
+</hibernate-mapping>

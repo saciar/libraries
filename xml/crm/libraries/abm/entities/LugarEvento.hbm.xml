@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.LugarEvento" table="MST_EVT_LUGAR">
+        <id name="codigo" column="el_codlugar">
+        </id>
+        <property name="nombreLugar" column="el_nombrelugar" />
+        <property name="contacto" column="el_contacto" />
+        <property name="telefono1" column="el_telefono1" />
+        <property name="telefono2" column="el_telefono2" />
+        <property name="fax" column="el_fax"/>
+        <property name="flotaNextel" column="el_nextel_flota" ></property>
+        <property name="idNextel" column="el_nextel_id"></property>
+        <property name="email" column="el_email" />
+        <property name="calle" column="el_calle" />
+        <property name="numero" column="el_nro" />
+        <property name="piso" column="el_piso" />
+        <property name="departamento" column="el_dpto" />
+        <property name="codigoPostal" column="el_cp" />
+        <property name="localidad" column="el_loc" />
+        <property name="codigoPartido" column="el_codpartido" />
+        <property name="codigoProvincia" column="el_codprovincia" ></property>
+        <property name="codigoPais" column="el_codpais" />
+        <property name="codigoComision" column="el_codvendcomi" />
+        <property name="emailOS" column="el_mail_os" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

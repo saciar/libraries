@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.ServicioDescripcion" table="MST_SERV_DESCRIP_DETALLADA">
+        <id name="codigo" column="sdd_id">
+	        <generator class="increment"/>
+        </id>        
+        <property name="codServicio" column="sdd_codserv" />
+        <property name="codIdioma" column="sdd_codidioma" />
+        <!--  property name="numero" column="ssd_numero" / -->
+        <property name="descripcion" column="ssd_descripcion" />        
+    </class>
+
+</hibernate-mapping>

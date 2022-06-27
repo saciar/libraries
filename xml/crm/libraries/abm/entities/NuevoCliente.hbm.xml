@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.NuevoCliente" table="TX_NUEVO_CLIENTE">
+        <id name="codigo" column="nc_codcliente">
+        </id>                
+        <property name="fechaAlta" column="nc_fecalta" />
+        <property name="nuevo" column="nc_nuevo" />
+    </class>
+
+</hibernate-mapping>

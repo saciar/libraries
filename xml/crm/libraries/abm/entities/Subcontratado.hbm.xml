@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Subcontratado" table="TX_GASTOS_CONTRATACIONES">
+        
+        <id name="codigo" column="gc_id">
+
+        </id>
+
+        <property name="proveedor" column="gc_codproveedor"/>
+        <property name="detalle" column="gc_detalle"/>
+        <property name="costo" column="gc_costo"/>
+        <property name="precio" column="gc_precio"/>
+        <property name="sala" column="gc_nombre_sala"/>
+        <property name="cantidad" column="gc_dias"/>
+        <property name="estado" column="gc_estado_serv"/>
+        <property name="nroPpto" column="gc_ppto_nroppto"/>
+    </class>
+
+</hibernate-mapping>

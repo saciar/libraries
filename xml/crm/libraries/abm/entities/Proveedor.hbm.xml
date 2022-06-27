@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Proveedor" table="MST_PROVEEDORES">
+        <id name="codigo" column="pr_codproveedor">
+        </id>
+        <property name="nombre" column="pr_nombreproveedor" />
+        <property name="contacto" column="pr_contacto" />
+        <property name="telefono1" column="pr_telefono1" />
+        <property name="telefono2" column="pr_telefono2" />
+        <property name="fax" column="pr_fax" />
+        <property name="flotaNextel" column="pr_nextel_flota" />
+        <property name="idNextel" column="pr_nextel_id" />
+        <property name="email" column="pr_email" />
+        <property name="calle" column="pr_calle" />
+        <property name="numero" column="pr_nro" />
+        <property name="piso" column="pr_piso" />
+        <property name="departamento" column="pr_dpto" />
+        <property name="localidad" column="pr_loc" />
+        <property name="partido" column="pr_codpartido" />
+        <property name="codigoPostal" column="pr_cp" />
+        <property name="provincia" column="pr_codprovincia" />
+        <property name="pais" column="pr_codpais" />         
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

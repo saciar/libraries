@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_Sala_Agregado" table="TX_PPTO_SALAS_AGREGADOS">
+		
+		<id name="id" column="pas_sala_id">
+        	<generator class="foreign">
+        		<param name="property">sala</param>
+        	</generator>
+        </id>
+        
+        <property name="fechaPrueba" column="pas_fechora_pruebas" />
+		<property name="fechaDesarme" column="pas_fechora_desarme" />
+		<property name="tipoArmado" column="pas_tipo_armado" />
+		
+		<one-to-one name="sala"
+    		class="crm.libraries.abm.entities.Ppto_Sala" constrained="true"
+    		lazy="false">
+    	</one-to-one>	
+        
+    </class>
+
+</hibernate-mapping>

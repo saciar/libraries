@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_Facturas" table="TX_PPTO_FACTURA">
+        <id name="id" column="fac_id">
+        	<generator class="identity"></generator>
+        </id>
+        <property name="factura" column="fac_factura" />
+        <property name="fechaAppend" column="fac_fecappend" />
+        <property name="estado" column="fac_estado" />
+    	<many-to-one name="presupuesto"
+    		class="crm.libraries.abm.entities.Presupuesto" 
+    		column="fac_nroppto" update="false" insert="false" lazy="false"/>
+
+    </class>
+
+</hibernate-mapping>

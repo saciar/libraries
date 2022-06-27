@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.VendedorPpto" table="TX_VENDEDOR_PPTO">
+        
+        <id name="id" column="vp_nroppto">
+        	<generator class="foreign">
+        		<param name="property">presupuesto</param>
+        	</generator>
+        </id>
+        <many-to-one name="vendedor" column="vp_vendedor" lazy="false">
+</many-to-one><property name="fecha" column="vp_fec_creacion" ></property><one-to-one
+    		name="presupuesto" constrained="true" class="crm.libraries.abm.entities.Presupuesto">
+</one-to-one>
+    </class>
+
+</hibernate-mapping>

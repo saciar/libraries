@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Presupuesto" table="TX_PPTO">
+
+        <id name="numeroDePresupuesto" column="ppto_nroppto">
+        	<generator class="increment"></generator>
+        </id>
+
+        <many-to-one name="cliente" column="ppto_codcliente"
+        	class="crm.libraries.abm.entities.Cliente" lazy="false" />
+
+        <property name="observacionesDelCliente" column="ppto_cliente_obs"/>
+        <property name="fechaDeInicio" column="ppto_fecinicio"/>
+        <property name="fechaDeFinalizacion" column="ppto_fecfin"/>
+        <property name="fechaDeInstalacion" column="ppto_fecinst"/>
+        <property name="totalDePersonas" column="ppto_totpersonas"/>
+        <property name="nombreDelEvento" column="ppto_evt_nombre"/>
+        <property name="codigoReferencia" column="ppto_referencia"/>
+        <property name="responsableEvento" column="ppto_responsable_evento"/>
+        <property name="responsableTel" column="ppto_responsable_evento_tel"/>
+        <property name="responsableEmail" column="ppto_responsable_evento_email"/>
+        <property name="responsableNextelFlota" column="ppto_responsable_evento_nxt_flota"/>
+        <property name="responsableNextelId" column="ppto_responsable_evento_nxt_id"/>
+        <property name="activo" column="ppto_activo"/>
+        <property name="cotizacion" column="ppto_rpt_cotizacion"/>
+        
+        <property name="usuarioActivo" column="ppto_usuario_activo"/>
+        <property name="macAddress" column="ppto_mac_activa"/>
+        <property name="ip" column="ppto_ip_activa"/>
+        
+        <many-to-one name="lugarDelEvento" column="ppto_evt_lugar"
+        	class="crm.libraries.abm.entities.LugarEvento" lazy="false" />
+
+        <property name="observacionesDelEvento" column="ppto_evt_obs"/>
+        
+        <many-to-one name="tipoDeEvento" column="ppto_evt_tipo"
+        	class="crm.libraries.abm.entities.TipoEvento" lazy="false" />
+        	
+        <many-to-one name="encabezadoPpto" column="ppto_rpt_encabezado"
+        	class="crm.libraries.abm.entities.PrtPptoHeader" lazy="false" />	
+		
+		<many-to-one name="formaPagoPpto" column="ppto_rpt_forma_pago"
+        	class="crm.libraries.abm.entities.PrtPptoFPago" lazy="false" />
+        	
+        <many-to-one name="condPagoPpto" column="ppto_rpt_cond_pago"
+        	class="crm.libraries.abm.entities.PrtPptoCondPago" lazy="false" />
+		
+		<many-to-one name="validezPpto" column="ppto_rpt_validez"
+        	class="crm.libraries.abm.entities.PrtPptoValidez" lazy="false" />
+        
+        <many-to-one name="tipoPpto" column="ppto_rpt_tipoppto"
+        	class="crm.libraries.abm.entities.PrtPptoTipoPresupuesto" lazy="false" />
+        	
+        <many-to-one name="cancelacionPpto" column="ppto_rpt_cancelacion"
+        	class="crm.libraries.abm.entities.PrtPptoCancelacion" lazy="false" />
+        
+        <many-to-one name="periodoPpto" column="ppto_rpt_periodo"
+        	class="crm.libraries.abm.entities.PrtPptoPeriodo" lazy="false" />
+        	
+        <many-to-one name="moneda" column="ppto_rpt_moneda"
+        	class="crm.libraries.abm.entities.MonedaExtranjera" lazy="false" />
+        
+        <many-to-one name="tipoDeLugarDelEvento"
+        	column="ppto_evt_tipo_lugar"
+        	class="crm.libraries.abm.entities.TipoLugarEvento"
+        	lazy="false" />
+
+        <many-to-one name="uniforme" column="ppto_evt_uniforme"
+        	class="crm.libraries.abm.entities.TipoUniforme" lazy="false" />
+<!-- 
+        <many-to-one name="referencia" column="ppto_referencia"
+        	class="crm.libraries.abm.entities.Referencia" lazy="false" />
+-->
+        <set name="salas" cascade="all-delete-orphan" lazy="false">
+        	<key column="ppto_s_nroppto" not-null="true" />
+        	<one-to-many class="crm.libraries.abm.entities.Ppto_Sala" />
+        </set>
+        <set name="cambiosEstado" cascade="all" lazy="false">
+        	<key column="chest_nroppto" not-null="true"></key>
+        	<one-to-many class="crm.libraries.abm.entities.PptoCambioEstado"></one-to-many>
+
+        </set>
+        <set name="facturas" cascade="all" lazy="false">
+        	<key column="fac_nroppto" not-null="true"></key>
+        	<one-to-many class="crm.libraries.abm.entities.Ppto_Facturas"></one-to-many>
+
+        </set>
+        <one-to-one name="estadoActual"
+        	class="crm.libraries.abm.entities.PptoEstadoActual"
+        	cascade="all" lazy="false">
+        </one-to-one>
+        
+        
+        <one-to-one name="vendedor" lazy="false" cascade="all"
+        	class="crm.libraries.abm.entities.VendedorPpto">
+        </one-to-one>
+
+
+        <set name="gastosSC" cascade="all-delete-orphan" lazy="false">
+        	<key column="gc_ppto_nroppto" not-null="true" />
+        	<one-to-many class="crm.libraries.abm.entities.Ppto_GastoSC" />
+        </set>
+
+        <set name="gastosOperador" cascade="all-delete-orphan" lazy="false">
+        	<key column="gp_nroppto" not-null="true" />
+        	<one-to-many class="crm.libraries.abm.entities.Ppto_GastoOperador" />
+        </set>
+        <set name="gastosRepresentacion" cascade="all-delete-orphan" lazy="false">
+        	<key column="gr_nroppto" not-null="true" />
+        	<one-to-many class="crm.libraries.abm.entities.Ppto_GastoRepresentacion" />
+        </set>  
+        <set name="gastosAsistentes" cascade="all-delete-orphan" lazy="false">
+        	<key column="ga_nroppto" not-null="true" />
+        	<one-to-many class="crm.libraries.abm.entities.Ppto_GastoAsistentes" />
+        </set>          
+        <set name="gastosViaticos" cascade="all-delete-orphan" lazy="false">
+        	<key column="gv_nroppto" not-null="true" />
+        	<one-to-many class="crm.libraries.abm.entities.Ppto_GastoViaticos" />
+        </set>                
+        <set name="gastosHoteleria" cascade="all-delete-orphan" lazy="false">
+        	<key column="gh_nroppto" not-null="true" />
+        	<one-to-many class="crm.libraries.abm.entities.Ppto_GastoHoteleria" />
+        </set>           
+        <set name="gastosVarios" cascade="all-delete-orphan" lazy="false">
+        	<key column="gva_nroppto" not-null="true" />
+        	<one-to-many class="crm.libraries.abm.entities.Ppto_GastoVarios" />
+        </set>                            
+
+        <one-to-one name="contacto" lazy="false"
+        	cascade="all"
+        	class="crm.libraries.abm.entities.Ppto_Contacto">
+        </one-to-one>
+        <one-to-one name="contactoLugar" lazy="false"
+        	cascade="all"
+        	class="crm.libraries.abm.entities.Ppto_Contacto_Lugar">
+        </one-to-one>
+        <one-to-one name="facturacion" lazy="false"
+        	cascade="all"
+        	class="crm.libraries.abm.entities.Ppto_Facturacion">
+        </one-to-one>
+        <one-to-one name="rentabilidad" lazy="false"
+        	cascade="all"
+        	class="crm.libraries.abm.entities.Ppto_Rentabilidad">
+        </one-to-one>
+        
+        <!-- 
+        <one-to-one name="seguimiento" lazy="false"
+        	cascade="all"
+        	class="crm.libraries.abm.entities.Ppto_Seguimiento"->
+        </one-to-one>
+        -->
+        <one-to-one name="agregado" lazy="false"
+        	cascade="all"
+        	class="crm.libraries.abm.entities.Ppto_Agregado">
+        </one-to-one>
+        <one-to-one name="adelanto" lazy="false"
+        	cascade="all"
+        	class="crm.libraries.abm.entities.Ppto_Adelanto">
+        </one-to-one>
+        <one-to-one name="pago" lazy="false"
+        	cascade="all"
+        	class="crm.libraries.abm.entities.Ppto_Pago">
+        </one-to-one>
+    </class>
+
+</hibernate-mapping>

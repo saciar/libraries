@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.AgendaTareasCobranzas" table="TX_AGENDA_TAREAS_COBRANZAS">
+
+        <id name="codigo" column="agc_codigo">
+        </id>
+        
+        <property name="numeroPresupuesto" column="agc_nroppto"/>
+        <property name="fechaIngreso" column="agc_fecha_ingreso"/>
+        <property name="fechaVencimiento" column="agc_fecha_vencimiento"/>
+        <property name="asunto" column="agc_asunto"/>
+        <property name="alerta" column="agc_alerta"/>         
+        <property name="activo" column="agc_activo"/>   
+        <property name="completa" column="agc_completa"/>  
+        <property name="monto" column="agc_monto"/>  
+        
+    </class>
+
+</hibernate-mapping>

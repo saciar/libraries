@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.LugarEventoContacto" table="MST_EVT_LUGAR_CONTACTOS">
+        <id name="codigo" column="elct_id">
+        </id>
+        <property name="codLugar" column="elct_codlugar" />
+		<property name="codigoContacto" column="elct_codcontacto" />
+		<property name="titulo" column="elct_titulo" />
+		<property name="apellidoYNombre" column="elct_apynom" />
+		<property name="departamento" column="elct_departamento" />
+		<property name="cargo" column="elct_cargo" />
+		<property name="telefono1" column="elct_telefono1" />
+		<property name="telefono2" column="elct_telefono2" />
+		<property name="fax" column="elct_fax" />
+		<property name="interno" column="elct_interno" />
+		<property name="nextelFota" column="elct_nextel_flota" />
+		<property name="nextelId" column="elct_nextel_id" />
+		<property name="email" column="elct_email" />
+		<property name="fecha" column="elct_fec_ult_contacto" />                
+		<property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

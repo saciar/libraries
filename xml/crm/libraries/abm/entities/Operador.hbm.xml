@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Operador" table="MST_OPERADORES">
+        <id name="codigo" column="op_codoper">
+        </id>
+        <property name="apellidoYNombre" column="apynom" />
+        <property name="modalidad" column="modalidad_oper" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

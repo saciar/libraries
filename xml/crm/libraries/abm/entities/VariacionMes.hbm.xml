@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.VariacionMes" table="MST_VARIACION_MES">
+        <id name="codigo" column="vm_id">
+        </id>
+        <property name="mes" column="vm_mes" />
+        <property name="variacion" column="vm_variacion" />
+        <property name="activo" column="vm_activo" />
+    </class>
+
+</hibernate-mapping>

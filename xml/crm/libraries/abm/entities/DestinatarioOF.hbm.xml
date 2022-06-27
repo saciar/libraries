@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.DestinatarioOF" table="MST_FACTURACIONES">
+        <id name="codigo" column="fact_id">
+        </id>
+        <property name="nombre" column="fact_descripcion" />
+        <property name="email" column="fact_email" />
+        <property name="activo" column="fact_activo" />
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,7 @@
+nbbuild
+nbdist
+.packaging
+.classpath
+.project
+build
+dist

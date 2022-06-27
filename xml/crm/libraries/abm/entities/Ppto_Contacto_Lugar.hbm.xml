@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_Contacto_Lugar" table="TX_PPTO_CONTACTO_LUGAR">
+        <id name="id" column="pcl_nroppto">
+        	<generator class="foreign">
+        		<param name="property">presupuesto</param>
+        	</generator>
+        </id>
+        <property name="codContacto" column="pcl_clict_id" ></property>
+    	<one-to-one name="presupuesto"
+    		class="crm.libraries.abm.entities.Presupuesto" constrained="true"
+    		lazy="false">
+    	</one-to-one>
+
+    </class>
+
+</hibernate-mapping>

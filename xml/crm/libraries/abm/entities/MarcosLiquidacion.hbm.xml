@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.MarcosLiquidacion" table="MST_MARCOS_LIQUIDACION">
+        <id name="codigo" column="ml_codmarco">
+        </id>
+        <property name="descripcion" column="ml_descripcion" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.ComisionSupervisor" table="MST1_COMISIONES_SUP">
+        <id name="codigo" column="cs_id">
+        </id>
+        <property name="codigoVendedor" column="cs_codvendedor" />
+        <property name="nivel" column="cs_nivel" />        
+        <property name="objetivo" column="cs_objetivo" />                
+        <property name="porcentaje" column="cs_porcentaje" />
+        <property name="marcoLiquidacion" column="cs_marco_liquidacion" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

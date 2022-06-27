@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Vendedor" table="MST_VENDEDORES">
+        <id name="codigo" column="vd_codvend">
+        </id>
+        <property name="codUsuario" column="vd_codusuario" />
+        <property name="apellidoYNombre" column="apynom" />
+        <property name="categoria" column="vd_categoria" />
+        <property name="fecing" column="fecing" />
+        <property name="nextelFlota" column="nextel_flota" />
+        <property name="idNextel" column="nextel_id" />
+        <property name="codEquipo" column="codequipo" />
+	    <property name="activo" column="activo" />
+	
+    </class>
+
+</hibernate-mapping>

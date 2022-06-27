@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.PrtPptoCancelacion" table="MST_PRT_PPTO_CANCELACION">
+        <id name="codigo" column="ppc_id">
+        </id>
+        <property name="titulo" column="ppc_desc_abreviada" />        
+        <property name="descripcion" column="ppc_descripcion" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

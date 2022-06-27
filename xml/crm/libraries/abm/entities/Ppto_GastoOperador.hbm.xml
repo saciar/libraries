@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_GastoOperador" table="TX_GASTOS_OPERADORES">
+        
+        <id name="id" column="gp_id">
+        	<generator class="increment"/>
+        </id>
+
+        <property name="operador" column="gp_codoperador"/>
+        <property name="cargo" column="gp_cargo"/>
+        <property name="horario" column="gp_horario"/>
+        <property name="costo" column="gp_costo"/>
+
+    </class>
+
+</hibernate-mapping>

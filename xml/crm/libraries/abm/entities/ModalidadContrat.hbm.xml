@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.ModalidadContrat" table="MST_MODALIDAD_CONTRATACION">
+        <id name="codigo" column="mc_codmodalidad">
+        </id>
+        <property name="descripcion" column="descripmodalidad" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

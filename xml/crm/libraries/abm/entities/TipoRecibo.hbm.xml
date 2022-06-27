@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.TipoRecibo" table="MST_TIPO_RECIBO">
+        <id name="codigo" column="rcb_id">
+        </id>
+        <property name="descripcion" column="rcb_descripcion" />
+        <property name="activo" column="rcb_activo" />
+    </class>
+
+</hibernate-mapping>

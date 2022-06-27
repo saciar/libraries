@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Ppto_GastoAsistentes" table="TX_GASTOS_ASISTENTES">
+        
+        <id name="id" column="ga_id">
+        	<generator class="increment"/>
+        </id>
+
+        <property name="asistente" column="ga_codasistente"/>
+        <property name="cargo" column="ga_cargo"/>
+        <property name="jornada" column="ga_jornada"/>
+        <property name="costo" column="ga_costo"/>
+
+    </class>
+
+</hibernate-mapping>

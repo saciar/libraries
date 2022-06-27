@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.DescPrecioDias" table="MST_DTO_PRECIOS_DIAS">
+        <id name="codigo" column="dp_coddescuento">
+        </id>
+        <property name="codigoServicio" column="dp_codservicio" />
+        <property name="techoDias" column="dp_techo_dias" />
+        <property name="porcentaje" column="dp_porcentaje_dto" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

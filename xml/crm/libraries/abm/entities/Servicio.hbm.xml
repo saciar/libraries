@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.Servicio" table="MST_SERVICIOS">
+        <id name="codigo" column="se_codservicio">
+        </id>        
+        <property name="familia" column="se_familia" />
+        <property name="precioVenta" column="se_preciovta" />
+        <property name="precioVentaMinimo" column="se_preciovta_minimo" />
+        <property name="admiteDescuento" column="se_adm_descuento" />
+        <property name="admiteSinCargo" column="se_adm_sincargo" />
+        <property name="peso" column="se_peso" />
+        <property name="largo" column="se_largo" />
+        <property name="altura" column="se_altura" />
+        <property name="ancho" column="se_ancho" />
+        <property name="accesorio" column="se_accesorio" />
+        <property name="activo" column="se_activo" />
+        <property name="unidadNegocio" column="se_unidad_negocio" />
+        
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.ModoIngEquipos" table="MST_MODO_ING_EQUIPOS">
+        <id name="codigo" column="mie_id">
+        </id>
+        <property name="descripcion" column="mie_descripcion" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>

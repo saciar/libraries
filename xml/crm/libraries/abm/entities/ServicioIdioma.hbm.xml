@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="crm.libraries.abm.entities.ServicioIdioma" table="MST_SERVICIOS_IDIOMA">
+        <!-- <id name="codigo" column="iv_codcond">
+        </id> -->
+        
+        <composite-id>
+        	<key-property name="codigoServicio" column="si_codservicio" />
+        	<key-property name="codigoIdioma" column="si_codidioma" />
+        </composite-id>
+        
+        <!--<property name="codigoServicio" column="si_codservicio" />
+        <property name="codigoIdioma" column="si_codidioma" />-->
+        <property name="descripcion" column="si_descripcion" />
+        <property name="descripcionAbreviada" column="si_descripcion_abreviada" />
+        <property name="activo" column="activo" />
+    </class>
+
+</hibernate-mapping>
